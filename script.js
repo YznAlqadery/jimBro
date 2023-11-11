@@ -84,79 +84,62 @@ function runApp(exercises) {
     exercises.forEach(function (ex) {
       let type = ex.muscle.toLowerCase();
 
-      if (
-        type !== "chest" ||
-        type !== "back" ||
-        type !== "shoulders" ||
-        type !== "legs" ||
-        type !== "arms"
-      ) {
-      } else {
-        const hrElement = document.createElement("hr");
-        const hiddenDiv = document.createElement("div");
-        const muscleText = document.createElement("h3");
-        muscleText.textContent = `${ex.muscle.toUpperCase()}`;
-        const exerciseText = document.createElement("p");
-        exerciseText.textContent = `Exercise: ${ex.exercise}`;
-        const repsText = document.createElement("p");
-        repsText.textContent = `Reps: ${ex.reps}`;
-        const toggleHidden = document.createElement("button");
-        toggleHidden.textContent = "↓";
-        toggleHidden.classList.add("toggle-hidden");
+      const hrElement = document.createElement("hr");
+      const hiddenDiv = document.createElement("div");
+      const muscleText = document.createElement("h3");
+      muscleText.textContent = `${ex.muscle.toUpperCase()}`;
+      const exerciseText = document.createElement("p");
+      exerciseText.textContent = `Exercise: ${ex.exercise}`;
+      const repsText = document.createElement("p");
+      repsText.textContent = `Reps: ${ex.reps}`;
+      const toggleHidden = document.createElement("button");
+      toggleHidden.textContent = "↓";
+      toggleHidden.classList.add("toggle-hidden");
 
-        const setsText = document.createElement("p");
+      const setsText = document.createElement("p");
 
-        setsText.textContent = `Sets: ${ex.sets}`;
-        const weightText = document.createElement("p");
+      setsText.textContent = `Sets: ${ex.sets}`;
+      const weightText = document.createElement("p");
 
-        weightText.textContent = `Weights: ${ex.weight.join(" ")}`;
+      weightText.textContent = `Weights: ${ex.weight.join(" ")}`;
 
-        hiddenDiv.append(
-          exerciseText,
-          repsText,
-          setsText,
-          weightText,
-          hrElement
-        );
+      hiddenDiv.append(exerciseText, repsText, setsText, weightText, hrElement);
 
-        hiddenDiv.classList.add(`exercise-${type}`);
-        hiddenDiv.classList.add("hidden");
+      hiddenDiv.classList.add(`exercise-${type}`);
+      hiddenDiv.classList.add("hidden");
 
-        if (type === "chest" && chestDiv.innerHTML === "") {
-          chestDiv.append(muscleText, toggleHidden, hiddenDiv);
-        } else if (type === "chest" && chestDiv.innerHTML !== "") {
-          chestDiv.append(toggleHidden, hiddenDiv);
-        } else if (type === "back" && backDiv.innerHTML === "") {
-          backDiv.append(muscleText, toggleHidden, hiddenDiv);
-        } else if (type === "back" && backDiv.innerHTML !== "") {
-          backDiv.append(toggleHidden, hiddenDiv);
-        } else if (type === "shoulders" && shouldersDiv.innerHTML === "") {
-          shouldersDiv.append(muscleText, toggleHidden, hiddenDiv);
-        } else if (type === "shoulders" && shouldersDiv.innerHTML !== "") {
-          shouldersDiv.append(toggleHidden, hiddenDiv);
-        } else if (type === "arms" && armsDiv.innerHTML === "") {
-          armsDiv.append(muscleText, toggleHidden, hiddenDiv);
-        } else if (type === "arms" && armsDiv.innerHTML !== "") {
-          armsDiv.append(toggleHidden, hiddenDiv);
-        } else if (type === "legs" && legsDiv.innerHTML === "") {
-          legsDiv.append(muscleText, toggleHidden, hiddenDiv);
-        } else if (type === "legs" && legsDiv.innerHTML !== "") {
-          legsDiv.append(toggleHidden, hiddenDiv);
-        }
-        const exerciseContainer = document.querySelectorAll(
-          `.exercise-${type}`
-        );
-        toggleHidden.addEventListener("click", function () {
-          exerciseContainer.forEach(function (div) {
-            div.classList.toggle("hidden");
-            if (div.classList.contains("hidden")) {
-              toggleHidden.textContent = "↓";
-            } else {
-              toggleHidden.textContent = "↑";
-            }
-          });
-        });
+      if (type === "chest" && chestDiv.innerHTML === "") {
+        chestDiv.append(muscleText, toggleHidden, hiddenDiv);
+      } else if (type === "chest" && chestDiv.innerHTML !== "") {
+        chestDiv.append(toggleHidden, hiddenDiv);
+      } else if (type === "back" && backDiv.innerHTML === "") {
+        backDiv.append(muscleText, toggleHidden, hiddenDiv);
+      } else if (type === "back" && backDiv.innerHTML !== "") {
+        backDiv.append(toggleHidden, hiddenDiv);
+      } else if (type === "shoulders" && shouldersDiv.innerHTML === "") {
+        shouldersDiv.append(muscleText, toggleHidden, hiddenDiv);
+      } else if (type === "shoulders" && shouldersDiv.innerHTML !== "") {
+        shouldersDiv.append(toggleHidden, hiddenDiv);
+      } else if (type === "arms" && armsDiv.innerHTML === "") {
+        armsDiv.append(muscleText, toggleHidden, hiddenDiv);
+      } else if (type === "arms" && armsDiv.innerHTML !== "") {
+        armsDiv.append(toggleHidden, hiddenDiv);
+      } else if (type === "legs" && legsDiv.innerHTML === "") {
+        legsDiv.append(muscleText, toggleHidden, hiddenDiv);
+      } else if (type === "legs" && legsDiv.innerHTML !== "") {
+        legsDiv.append(toggleHidden, hiddenDiv);
       }
+      const exerciseContainer = document.querySelectorAll(`.exercise-${type}`);
+      toggleHidden.addEventListener("click", function () {
+        exerciseContainer.forEach(function (div) {
+          div.classList.toggle("hidden");
+          if (div.classList.contains("hidden")) {
+            toggleHidden.textContent = "↓";
+          } else {
+            toggleHidden.textContent = "↑";
+          }
+        });
+      });
     });
   }
 }
