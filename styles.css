@@ -121,6 +121,7 @@ a {
   width: 200px;
   border-radius: 8px;
   margin-top: 10px;
+  color: #353535;
 }
 .hidden {
   display: none;
