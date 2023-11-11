@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jimBro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <nav class="flex-nav">
+        <h1>jimBro</h1>
+        <p class="description">EVERY WORKOUT COUNTS.</p>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="add-box hidden">
+          <button class="close-add-box">&times;</button>
+          <form class="form-flex">
+            <label>Muscle:</label>
+            <input class="muscle-input" type="text" placeholder="Chest" />
+            <label>Exercise:</label>
+            <input
+              class="exercise-input"
+              type="text"
+              placeholder="Bench Press, etc"
+            />
+            <label>Repetions:</label>
+            <input class="reps-input" type="text" placeholder="6-8-10" />
+            <label>Sets:</label>
+            <input class="sets-input" type="text" placeholder="3" />
+            <label>Weights:</label>
+            <input class="weights-input" type="text" placeholder="50 52.5 55" />
+            <button class="submit-btn">SUBMIT</button>
+          </form>
+        </div>
+        <button class="add-ex">+ ADD EXERCISE</button>
+        <button class="delete-ex">- DELETE ALL</button>
+        <div class="container"></div>
+      </section>
+      <footer>
+        <div class="links">
+          <a href="https://www.instagram.com/yyazanalqaderi/">Instagram</a>
+          <a href="https://github.com/YznAlqadery">GitHub</a>
+        </div>
+        <p class="foot-p">&copy Yazan Alqadery. All rights reserved.</p>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

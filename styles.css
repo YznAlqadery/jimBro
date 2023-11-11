@@ -1,0 +1,161 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+header {
+  background-color: #353535;
+  color: #ffffff;
+  width: 100%;
+}
+h1 {
+  margin-left: 10px;
+  text-decoration: underline;
+}
+section {
+  height: 100%;
+}
+img {
+  width: 100px;
+  height: 80px;
+  mix-blend-mode: darken;
+  display: inline;
+}
+p {
+  margin: 25px;
+}
+input {
+  padding: 3px;
+  border-radius: 8px;
+  width: 200px;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 1em;
+  text-align: center;
+}
+footer {
+  background-color: #353535;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding: 30px 0;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+p {
+  color: #ffffff;
+  text-align: center;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+  padding: 8px;
+  border: none;
+  font-size: 14px;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 25px;
+}
+
+.add-ex,
+.delete-ex {
+  display: block;
+  margin: 25px auto;
+  width: 140px;
+  background-color: #353535;
+  color: #ffffff;
+  border-radius: 14px;
+}
+.flex-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.add-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 55px 12px;
+  z-index: 10;
+  height: 300px;
+  width: 280px;
+  background-color: #353535;
+  color: #ffffff;
+}
+.description {
+  font-size: 14px;
+}
+.form-flex {
+  margin: 38px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 230px;
+  height: 230px;
+  align-items: center;
+  justify-content: center;
+}
+.close-add-box {
+  position: absolute;
+  top: -2%;
+  right: 4%;
+  font-size: 40px;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.submit-btn {
+  background-color: #ffffff;
+  width: 200px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.hidden {
+  display: none;
+}
+.chest,
+.back,
+.shoulders,
+.legs,
+.arms {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #353535;
+  width: 320px;
+  color: #ffffff;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+h3 {
+  background-color: #d9d9d9;
+  color: #353535;
+  padding: 8px;
+  margin-top: 0;
+}
+.toggle-hidden {
+  position: absolute;
+  background-color: #353535;
+  color: #ffffff;
+  right: 0;
+  font-size: 20px;
+}
